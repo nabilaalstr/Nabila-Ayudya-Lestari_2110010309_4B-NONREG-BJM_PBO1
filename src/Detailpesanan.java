@@ -5,25 +5,24 @@ public class Detailpesanan extends RMHMKN {
         super(nama,kodepesanan);
     }
  
-public String getkodepesanan(){
+ public String getkodepesanan(){
      String kdpsnn = getKdpesanan().substring(0, 2);
-     
-     switch (kdpsnn){
-         case "01":
-             return "Sup Buntut";
-         case "02":
-             return "Ayam Bakar";
-         case "03":
-             return "Sate Ayam";
-         case "04":
-             return "Sate Kambing";
-         case "05":
-             return "Soto Banjar";
-        
-         default:
-             return "Menu tidak ada";
+     //seleksi if
+      if(kdpsnn.equals("01")){
+         return "Sup Buntut";
+     } else if (kdpsnn.equals("02")) {
+        return "Ayam Bakar";
+     } else if (kdpsnn.equals("03")) {
+        return "Sate Ayam ";
+     } else if (kdpsnn.equals("04")) {
+        return "Soto Banjar";
+     } else if (kdpsnn.equals("05")) {
+        return "Rawon";
+     } else {
+         return "Menu tidak ada";
      }
  }
+
  public String getnomorantrian(){
      String nomorantrian = getKdpesanan().substring(2, 4);
    
